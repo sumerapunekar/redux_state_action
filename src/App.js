@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useSelector,useDispatch } from 'react-redux';
-import store from './store';
+import {action} from './store';
 
 function App() {
   const {counter} = useSelector(store => store)
@@ -9,15 +9,15 @@ function App() {
   const dispatch = useDispatch();
 
   const increment = () =>{
-   dispatch ({type : "increment"})
+   dispatch (action.increment())
   }
 
   const decrement = () =>{
-    dispatch ({type : "decrement"})
+    dispatch (action.decrement())
    }
 
    const add = (x) =>{
-    dispatch ({type : "add", payload : x})
+    dispatch (action.add(x))
    }
    
   return (
