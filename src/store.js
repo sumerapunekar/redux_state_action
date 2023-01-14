@@ -1,5 +1,5 @@
 import {configureStore,createSlice} from "@reduxjs/toolkit"
-  
+
 const counterSlice = createSlice({
     name : "counter" ,
     initialState : {counter : 0} ,
@@ -22,7 +22,7 @@ export const action = counterSlice.actions ;
 const store = configureStore({
     reducer : counterSlice.reducer 
 })
-
+console.log(action)
 
 
 export default store
